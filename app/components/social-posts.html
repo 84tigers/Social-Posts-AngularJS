@@ -2,7 +2,7 @@
     <button>New Thought</button>
     <post-form></post-form>
     <section class="post-container">
-        <post ng-repeat="thoughts in $cntrl.posts "></post>
+        <post thoughts="thoughts" ng-repeat="thoughts in $ctrl.posted "></post>
     </section>
 </section>
 

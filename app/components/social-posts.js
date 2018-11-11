@@ -3,7 +3,7 @@ const socialPosts = {
     templateUrl: "app/components/social-posts.html",
     controller: [function() {
         const vm = this;
-        vm.posts = [{
+        vm.posted = [{
             title: "Phife Dawg",
             thought: "I never half step cuz I'm not a half stepper. Drink a lot of soda, so they call me Dr. Pepper."
         }, {
