@@ -18,11 +18,14 @@ const socialPosts = {
         }, {
             title: "Inspectah Deck",
             thought: "I bomb atomically. Socrates' philosophies and hypotheses can't define how I be droppin' these mockeries. Lyrically perform armed robbery."
-        }];
+        },];
 
-        self.addPost = (newPost) => {
+        vm.addPost = (newPost) => {
             console.log(newPost);
-            self.posted.push(angular.copy(newPost));
+            vm.posted.unshift(angular.copy({
+                title: newPost.title,
+                thought: newPost.thought
+            }));
         };
     
     }]

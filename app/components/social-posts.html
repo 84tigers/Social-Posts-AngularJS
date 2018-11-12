@@ -1,10 +1,19 @@
 <section class="thoughts-container">
-    <button>New Thought</button>
-    <post-form></post-form>
+    <button ng-hide="noBtn" ng-click="noBtn = true; seeForm = true" >New Thought</button>
+    <post-form ng-show="seeForm" on-submit="$ctrl.addPost(newPost)"></post-form>
     <section class="post-container">
-        <post thoughts="thoughts" ng-repeat="thoughts in $ctrl.posted "></post>
+        <post post="thoughts" ng-repeat="thoughts in $ctrl.posted"></post>
     </section>
 </section>
 
 
+<!-- Sandbox for post-form template -->
 
+<!-- <form action="" ng-submit="$ctrl.onSubmit({newPost: $ctrl.posted})" class="post-form-ctnr">
+    <p>{{ $ctrl.posted }}</p>
+    <label for="input">Title</label>
+    <input type="text" class="post-title">
+    <label for="textarea" >Thought</label>
+    <textarea name="textarea" id="" cols="30" rows="10"></textarea>
+    <button class="add-btn">Add Post</button>
+</form> -->
