@@ -22,10 +22,7 @@ const socialPosts = {
 
         vm.addPost = (newPost) => {
             console.log(newPost);
-            vm.posted.unshift(angular.copy({
-                title: newPost.title,
-                thought: newPost.thought
-            }));
+            vm.posted.unshift(angular.copy(newPost));
         };
     
     }]

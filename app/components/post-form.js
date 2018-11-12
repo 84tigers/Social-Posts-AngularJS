@@ -2,13 +2,12 @@
 
 const postForm = {
     template: `
-    <form action="" ng-submit="$ctrl.onSubmit({newPost: $ctrl.posted})" class="post-form-ctnr">
-        <p>{{ $ctrl.posted }}</p>
+    <form ng-submit="$ctrl.onSubmit({newPost: $ctrl.posted})" class="post-form-ctnr">
         <label for="input">Title</label>
         <input type="text" class="post-title" ng-model="$ctrl.posted.title">
         <label for="textarea" >Thought</label>
-        <textarea name="textarea" id="" cols="30" rows="10" ng-model="$ctrl.posted.thought"></textarea>
-        <button class="add-btn">Add Post</button>
+        <textarea name="textarea" id="" ng-model="$ctrl.posted.thought"></textarea>
+        <button ng-click="noBtn = false; seeForm = false" class="add-btn">Add Post</button>
     </form>
     `,
     bindings: {

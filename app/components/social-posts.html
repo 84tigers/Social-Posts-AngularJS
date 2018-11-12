@@ -2,7 +2,7 @@
     <button ng-hide="noBtn" ng-click="noBtn = true; seeForm = true" >New Thought</button>
     <post-form ng-show="seeForm" on-submit="$ctrl.addPost(newPost)"></post-form>
     <section class="post-container">
-        <post post="thoughts" ng-repeat="thoughts in $ctrl.posted"></post>
+        <post post="thoughts" ng-repeat="thoughts in $ctrl.posted" thoughts="thoughts"></post>
     </section>
 </section>
 
